@@ -2,7 +2,7 @@
 " Language:		MT-Syntax (mtsx)
 " Maintainer:		A4-Tacks <wdsjxhno1001@163.com>
 " Last Change:		2024-06-26
-" URL:			https://github.com/A4-Tacks/abnf_to_mtsx
+" URL:			https://github.com/A4-Tacks/mtsyntax.vim
 
 if exists("b:current_syntax")
     finish
@@ -13,12 +13,6 @@ endif
 
 " 大小写敏感
 syn case match
-
-setlocal comments=://
-setlocal commentstring=//%s
-setlocal iskeyword+=-
-setlocal foldmethod=syntax
-
 
 syn region mtsyntaxString start=/"/ end=/"\|$/ contains=mtsyntaxStrEscape,mtsyntaxStrFailEscape
 syn match mtsyntaxStrFailEscape /\\./ contained

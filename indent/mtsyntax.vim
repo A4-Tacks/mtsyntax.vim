@@ -2,7 +2,7 @@
 " Language:		mtsyntax
 " Maintainer:		A4-Tacks <wdsjxhno1001@163.com>
 " Last Change:		2024-06-26
-" URL:			https://github.com/A4-Tacks/abnf_to_mtsx
+" URL:			https://github.com/A4-Tacks/mtsyntax.vim
 
 if exists('b:did_indent')
     finish
