@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:		MT-Syntax (mtsx)
 " Maintainer:		A4-Tacks <wdsjxhno1001@163.com>
-" Last Change:		2024-06-26
+" Last Change:		2025-06-25
 " URL:			https://github.com/A4-Tacks/mtsyntax.vim
 
 if exists("b:current_syntax")
@@ -36,7 +36,8 @@ hi def link mtsyntaxRegexCompactInclude Include
 hi def link mtsyntaxRegexCompactIncludeGroup Operator
 
 syn match mtsyntaxBuiltin /#[0-9A-Z_]\+#/
-syn match mtsyntaxColor /#\x\{3,8}\>/
+syn match mtsyntaxColor /[#$]\x\{3,8}\>/
+syn match mtsyntaxColor /[#$]\cNULL\>/
 syn match mtsyntaxRegexGroup /\v<(0|[1-9]\d*)>/
 syn match mtsyntaxBoolean /\v<(true|false)>/
 syn match mtsyntaxMeta /\v\@<\K\k*>/
