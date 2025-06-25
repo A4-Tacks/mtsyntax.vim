@@ -56,6 +56,7 @@ syn region mtsyntaxBlock start=/{/ end=/}/ transparent fold
 syn region mtsyntaxList start=/\[/ end=/]/ transparent fold
 
 syn match  mtsyntaxPreProc +\v//!%(BEGIN|END|COLOR%(DEF)=|NOOPT|CODE)>+
+syn match  mtsyntaxPreProc +\v//!include%(Begin|End)>+
 
 " mtsyntaxABNF {{{
 syn region mtsyntaxABNFString start=/\(%[si]\)\="/ end=/"\|$/ contains=mtsyntaxABNFStrEscape,mtsyntaxABNFStrFailEscape
