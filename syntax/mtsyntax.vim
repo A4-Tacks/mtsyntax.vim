@@ -14,6 +14,8 @@ endif
 " 大小写敏感
 syn case match
 
+syn sync minlines=1000
+
 syn region mtsyntaxString start=/"/ end=/"\|$/ contains=mtsyntaxStrEscape,mtsyntaxStrFailEscape
 syn match  mtsyntaxStrFailEscape /\\./ contained
 syn match  mtsyntaxStrEscape /\\\(x\x\x\|u\x\{4}\|[f'"\\tbnr]\)/ contained
