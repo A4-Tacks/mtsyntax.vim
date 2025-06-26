@@ -53,8 +53,9 @@ syn keyword mtsyntaxTodo contained TODO FIXME NOTE Todo Note
 syn match  mtsyntaxComment /\/\/.*/ contains=mtsyntaxTodo
 
 syn region mtsyntaxBlock start=/{/ end=/}/ transparent fold
-syn region mtsyntaxList start=/\[/ end=/]/ transparent fold
+syn region mtsyntaxList start=/\[\@1<!\[\[\@!/ end=/]\@1<!]]\@!/ transparent fold
 
+syn match  mtsyntaxTemplate /\v\[\[\s*%(<%(>@!.)*\s*)=\]\]/
 syn match  mtsyntaxPreProc +\v//!%(BEGIN|END|COLOR%(DEF)=|NOOPT|CODE)>+
 syn match  mtsyntaxPreProc +\v//!include%(Begin|End)>+
 
@@ -91,6 +92,7 @@ hi def link mtsyntaxBuiltinFunction		Operator
 hi def link mtsyntaxKeywords			Keyword
 hi def link mtsyntaxTodo			Todo
 hi def link mtsyntaxComment			Comment
+hi def link mtsyntaxTemplate			PreProc
 hi def link mtsyntaxPreProc			PreProc
 hi def link mtsyntaxABNFString			String
 hi def link mtsyntaxABNFStrEscape		SpecialChar
